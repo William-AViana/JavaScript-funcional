@@ -7,7 +7,7 @@ const saudacao = nome => `Fala ${nome}, blz?!?`
 console.log(saudacao('william'))
 
 const somar = (...numeros) => {
-    // o operador rest adiciona todos os valores dentro de um array
+    // o operador rest "..." adiciona todos os valores dentro de um array
     // se executar typeof returna um objeto (array é um objeto em JS)
     // console.log(Array.isArray(numeros))
     let total = 0
