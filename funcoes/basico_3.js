@@ -33,8 +33,9 @@ Array.prototype.ultimo = function () {
     console.log(this[this.length - 1]) // this está se referenciando aos valores do array
 }
 
-Array.prototype.primeiro = function () {
-    console.log(this[0]) // this funciona diferente com arrow function
+Array.prototype.primeiro = () => {
+    console.log(this[0])
+    // this funciona diferente com arrow function retorna undefind
 }
 
 const numeros = [1, 2, 3, 54321]
