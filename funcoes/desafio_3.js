@@ -32,3 +32,26 @@ const media = carrinho
     .media.toFixed(2)
 
 console.log(`A média é ${media}!`)
+
+// Implementando o reduce
+Array.prototype.meuReduce = function (fn, inicial) {
+    let acc = inicial
+
+    for (let i = 0; i < this.length; i++) {
+        if (!acc && i === 0) {
+            acc = this[i]
+        } else {
+            acc = fn(acc, this[i], i, this)
+        }
+    }
+    return acc
+}
+
+const mediaInicial2 = { qtde: 0, total: 0, media: 0 }
+const media2 = carrinho
+    .filter(fragil)
+    .map(totais)
+    .reduce(getMedia, mediaInicial2)
+    .media.toFixed(2)
+
+console.log(`A média é ${media2}!`)
