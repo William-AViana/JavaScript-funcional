@@ -35,7 +35,7 @@ Array.prototype.ultimo = function () {
 
 Array.prototype.primeiro = () => {
     console.log(this[0])
-    // this funciona diferente com arrow function retorna undefind
+    // this funciona diferente com arrow function retorna undefined
 }
 
 const numeros = [1, 2, 3, 54321]
