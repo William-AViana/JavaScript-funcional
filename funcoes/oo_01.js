@@ -1,4 +1,4 @@
-// Estanciando um Objeto com função
+// Estanciando um Objeto com função construtora
 function Produto(nome, preco, desc = 0.50) {
     this.nome = nome
     this.preco = preco
@@ -19,5 +19,5 @@ console.log(p1.nome)
 const p2 = new Produto('Geladeira', 3000)
 console.log(p2.preco)
 
-console.log(p1.precoFinal())
-console.log(p2.precoFinal())
+console.log(`Produto: ${p1.nome} tem desconto de R$ ${p1.precoFinal().toFixed(2)}`)
+console.log(`Produto: ${p2.nome} tem desconto de R$ ${p2.precoFinal().toFixed(2)}`)
