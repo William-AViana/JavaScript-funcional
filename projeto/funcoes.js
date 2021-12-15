@@ -4,11 +4,10 @@ const path = require('path')
 function lerDiretorio(caminho) {
   return new Promise((resolve, reject) => {
     try {
-      const arquivos = fs.readdirSync(caminho) // retorna um array
-      const arquivosCompletos = arquivos.map(arquivo => {
+      const arquivos = fs.readdirSync(caminho).map(arquivo => {
         return path.join(caminho, arquivo)
       })
-      resolve(arquivosCompletos)
+      resolve(arquivos)
     } catch (e) {
       reject(e)
     }
@@ -95,12 +94,14 @@ function agruparElementos(palavras) {
     return acc
   }, {}))
 }
-
+// função era impura antes do [...array], estava alterando os dados originais
 function ordenarPorAtributoNumerico(attr, ordem = 'asc') {
   return function (array) {
     const asc = (o1, o2) => o1[attr] - o2[attr]
     const desc = (o1, o2) => o2[attr] - o1[attr]
-    return array.sort(ordem === 'asc' ? asc : desc)
+    return [...array].sort(ordem === 'asc' ? asc : desc)
+    //sort() gera uma alteração no array, clonar o array com spred
+    // a função passa a ser pura
   }
 }
 
