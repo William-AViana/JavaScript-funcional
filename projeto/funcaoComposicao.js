@@ -11,7 +11,7 @@ const simbolos = [
 ]
 
 // Desafio usando composição
-fn.composicao(
+const palavrasMaisUsadas = fn.composicao(
   fn.lerDiretorio,
   fn.elementosTerminadosCom('.srt'),
   fn.lerArquivos,
@@ -27,7 +27,8 @@ fn.composicao(
   fn.removerElementosSeApenasNumeros,
   fn.agruparElementos,
   fn.ordenarPorAtributoNumerico('qtde', 'desc')
-)(caminho)
+)
+palavrasMaisUsadas(caminho)
   .then(console.log)
 
 
