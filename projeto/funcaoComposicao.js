@@ -31,7 +31,6 @@ fn.composicao(
   .then(console.log)
 
 
-
 // fn.lerDiretorio(caminho)
 //   .then(
 //   .then(
