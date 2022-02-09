@@ -105,7 +105,7 @@ function ordenarPorAtributoNumerico(attr, ordem = 'asc') {
   }
 }
 
-// Desafio composição
+// Desafio composição com Promise
 function composicao(...fns) {
   return function (valor) {
     return fns.reduce(async (acc, fn) => {
