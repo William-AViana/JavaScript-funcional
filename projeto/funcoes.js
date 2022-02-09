@@ -105,7 +105,22 @@ function ordenarPorAtributoNumerico(attr, ordem = 'asc') {
   }
 }
 
+// Desafio composição
+function composicao(...fns) {
+  return function (valor) {
+    return fns.reduce(async (acc, fn) => {
+      // Verificar se é uma promisse e executar await
+      if (Promise.resolve(acc) === acc) {
+        return fn(await acc)
+      } else {
+        return fn(acc)
+      }
+    }, valor)
+  }
+}
+
 module.exports = {
+  composicao,
   lerDiretorio,
   lerArquivo,
   lerArquivos,
