@@ -7,7 +7,7 @@ Modelo mental para te guiar e transformar o problema do mundo real em softwere.
     - Os objetos tem atributos, responsabilidades e relação entre esses objetos.
 
 - Paradigma Funcional
-    - trabalha com dados constantes (consome mais de memória e processamento)
+    - trabalha com dados constantes (consome mais memória e processamento)
     - lida melhor com processamento paralelo
 
 - Paradigma Procedural
